@@ -1,0 +1,399 @@
+# ============================================================================
+# FireRedASR Git 忽略文件配置
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# Python 相关
+# ----------------------------------------------------------------------------
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.pytest_cache/
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff
+instance/
+.webassets-cache
+
+# Scrapy stuff
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ----------------------------------------------------------------------------
+# 模型文件（通常很大，不应提交到git）
+# ----------------------------------------------------------------------------
+# 预训练模型文件
+pretrained_models/
+*.pth
+*.pth.tar
+*.pt
+*.ckpt
+*.bin
+*.pb
+*.onnx
+*.safetensors
+
+# 模型分词器
+*.model
+*.vocab
+
+# 保留 README 文件但忽略模型文件
+!pretrained_models/README.md
+
+# 字典文件（如果很大的话）
+# dict.txt
+
+# ----------------------------------------------------------------------------
+# 音频文件
+# ----------------------------------------------------------------------------
+# 输入音频
+*.wav
+*.webm
+*.mp3
+*.flac
+*.m4a
+*.ogg
+*.opus
+*.aac
+*.wma
+
+# 输出音频
+output.wav
+output_*.wav
+
+# 音频文件夹
+*-wav/
+*-webm/
+audio_files/
+recordings/
+
+# ----------------------------------------------------------------------------
+# 转录输出和检查点文件
+# ----------------------------------------------------------------------------
+# 转录结果
+transcription_results.txt
+transcription_*.txt
+*_transcript.txt
+*_transcription.txt
+
+# 检查点文件
+transcription_checkpoint.json
+checkpoint.json
+*.checkpoint
+
+# 进度文件
+conversion_progress.txt
+progress.txt
+*_progress.txt
+
+# ----------------------------------------------------------------------------
+# 日志文件
+# ----------------------------------------------------------------------------
+# 所有日志文件
+*.log
+logs/
+log/
+conversion.log
+transcription.log
+error.log
+debug.log
+
+# ----------------------------------------------------------------------------
+# 临时文件和缓存
+# ----------------------------------------------------------------------------
+# 操作系统临时文件
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.*.swp
+.*.swo
+
+# 临时目录
+tmp/
+temp/
+cache/
+.cache/
+
+# ----------------------------------------------------------------------------
+# IDE 和编辑器配置
+# ----------------------------------------------------------------------------
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# ----------------------------------------------------------------------------
+# 数据文件
+# ----------------------------------------------------------------------------
+# 大型数据集
+data/
+dataset/
+datasets/
+raw_data/
+processed_data/
+
+# CSV 和表格文件（根据需要调整）
+# *.csv
+# *.tsv
+# *.xlsx
+
+# ----------------------------------------------------------------------------
+# 输出和结果文件
+# ----------------------------------------------------------------------------
+# 实验结果
+results/
+output/
+outputs/
+out/
+
+# 图表和可视化
+plots/
+figures/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+
+# 保留项目文档中的图片
+!assets/*.png
+!assets/*.jpg
+!assets/*.jpeg
+!assets/*.svg
+!assets/**/*.png
+!assets/**/*.jpg
+!assets/**/*.jpeg
+!assets/**/*.svg
+
+# ----------------------------------------------------------------------------
+# 压缩文件
+# ----------------------------------------------------------------------------
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.bz2
+*.xz
+
+# ----------------------------------------------------------------------------
+# 配置和密钥文件
+# ----------------------------------------------------------------------------
+# 敏感配置
+config/local.py
+config/secrets.py
+secrets.yaml
+credentials.json
+.env.local
+.env.*.local
+
+# API 密钥
+*.key
+*.pem
+*.crt
+
+# ----------------------------------------------------------------------------
+# 其他
+# ----------------------------------------------------------------------------
+# 备份文件
+*.bak
+*.backup
+*~
+
+# 编译产物
+*.o
+*.a
+*.lib
+*.dll
+*.dylib
+
+# 调试文件
+core
+*.dSYM/
+*.su
+
+# 文档生成
+_build/
+.doctrees/
+
+# ----------------------------------------------------------------------------
+# 项目特定文件（根据实际情况调整）
+# ----------------------------------------------------------------------------
+# 示例：保留某些特定文件
+# !examples/wav/BAC009S0764W0121.wav
+# !examples/wav/*.wav
+
+# 测试文件夹的输出
+examples/out/
+examples/output/
+
+# Conda 环境文件（可选）
+# environment.yml
+# conda-meta/
+
+# ----------------------------------------------------------------------------
+# Git 相关
+# ----------------------------------------------------------------------------
+# Git 补丁文件
+*.patch
+*.diff
+
+# ----------------------------------------------------------------------------
+# 说明
+# ----------------------------------------------------------------------------
+# 在文件开头加 ! 可以强制包含某个文件，即使它匹配了忽略规则
+# 例如: !important_file.txt
+#
+# 要忽略整个文件夹但保留其中的 README:
+# folder_name/
+# !folder_name/README.md
+
