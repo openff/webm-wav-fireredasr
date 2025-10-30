@@ -11,9 +11,14 @@
 #   --batch_size: 批处理大小
 #   --reset: 重置检查点（可选）
 #   --resume: 从指定文件继续（可选）
+cd /home/jbj/openai/modle/FireRedASR-AED-L/FireRedASR
+
+#官方封装工具包fireredasr文件夹路劲，否则会报组件缺失。
 export PATH=$PWD/fireredasr/:$PWD/fireredasr/utils/:$PATH
 export PYTHONPATH=$PWD/:$PYTHONPATH
-python fireredasr/wavASR.py \
+
+#后续就可以执行wavASR转录程序
+python /home/jbj/openai/modle/FireRedASR-AED-L/FireRedASR/fireredasr/wavASR.py \
     --wav_dir /home/jbj/openai/modle/FireRedASR-AED-L/2025-10-24-wav \
     --asr_type aed \
     --model_dir /home/jbj/openai/modle/FireRedASR-AED-L \

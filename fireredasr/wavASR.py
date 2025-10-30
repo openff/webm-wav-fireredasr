@@ -35,7 +35,14 @@ FireRedASR 语音识别脚本
 python fireredasr/wavASR.py
 
 方式2：通过命令行参数覆盖全局配置
-python fireredasr/wavASR.py --wav_dir /path/to/audio --asr_type aed --use_gpu 1
+python /home/jbj/openai/modle/FireRedASR-AED-L/FireRedASR/fireredasr/wavASR.py \
+    --wav_dir /home/jbj/openai/modle/FireRedASR-AED-L/2025-10-24-wav \
+    --asr_type aed \
+    --model_dir /home/jbj/openai/modle/FireRedASR-AED-L \
+    --use_gpu 0 \
+    --output transcription_results.txt \
+    --batch_size 1 \
+    "$@"
 
 方式3（完整参数）：
 python fireredasr/wavASR.py --wav_dir /home/jbj/openai/modle/FireRedASR-AED-L/2025-10-24-wav --asr_type aed --model_dir /home/jbj/openai/modle/FireRedASR-AED-L --use_gpu 0 --output transcription_results.txt --batch_size 1 
