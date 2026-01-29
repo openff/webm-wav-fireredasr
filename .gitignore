@@ -207,6 +207,7 @@ progress.txt
 *.log
 logs/
 log/
+docs
 conversion.log
 transcription.log
 error.log
